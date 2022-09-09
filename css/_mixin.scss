@@ -1,0 +1,17 @@
+@mixin row($justify, $align, $row, $column) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+    row-gap: $row;
+    column-gap: $column;
+}
+
+@mixin column($justify, $align, $row, $column) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+    row-gap: $row;
+    column-gap: $column;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js" defer></script>
+</head>
+
+<body>
+    <div id="section1">
+        <h1>Dostupan budzet u Januaru 2022</h1>
+        <p class="dostupanBudzet"></p>
+        <div class="section1_input">
+            <p class="paragraf">PRIHOD</p>
+            <p class="novac prihod"></p>
+        </div>
+        <div class="section1_input">
+            <p class="paragraf">RASHOD</p>
+            <div class="row">
+            <p class="novac rashod"></p>
+            <p class="novac procenat"></p>
+        </div>
+        </div>
+    </div>
+    <div id="section2">
+        <select name="plusMinus" id="plusMinus">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+        </select>
+        <input type="text" name="opis" id="opis" class="input" placeholder="Opis" required>
+        <input type="number" name="iznos" id="iznos" class="input" placeholder="Iznos" required>
+        <button class="button">Unesi</button>
+    </div>
+    <div id="section3">
+        <div class="section3_div">
+            <h2 class="section3_naslov">PRIHODI</h2>
+            <div class="ispis pozitivanIspis">
+                <!-- <p>plata</p>
+                <p class="novac plata pozitivan">9999</p> -->
+            </div>
+            <div class="ispis pozitivanIspis">
+                <!-- <p>Mesecni bonusi</p>
+                <p class="novac mesecniBonusi pozitivan">9999</p> -->
+            </div>
+        </div>
+        <div class="section3_div">
+            <h2 class="section3_naslov">RASHODI</h2>
+            <div class="ispis negativanIspis">
+                <!-- <p>Kirija</p>
+                <p class="novac mesecniBonusi negativan">9999</p>
+                <p class="novac mesecniBonusi negativan">40%</p>              -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

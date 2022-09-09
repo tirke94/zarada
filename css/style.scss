@@ -1,0 +1,172 @@
+@use './mixin';
+@use './variables';
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    background-color: variables.$section3;
+}
+
+.novac {
+    font-size: variables.$fontSizeSrednji;
+    color: variables.$fontColorlight;
+    letter-spacing: 1px
+}
+
+#section1 {
+    @include mixin.column(space-between, center, 1rem, 0);
+    background-color: variables.$section1;
+
+    h1 {
+        font-size: variables.$fontSizeNaslov;
+        color: variables.$fontColorlight;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-top: .7rem;
+    }
+
+    .dostupanBudzet {
+        font-size: variables.$fontSizenajveci;
+        color: variables.$fontColorlight;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .section1_input {
+        @include mixin.row(space-between, center, 0, 0);
+        width: 20rem;
+        padding: .5rem 2rem;
+        margin-bottom: .5rem;
+
+        &:first-of-type {
+            background-color: variables.$fontColorgreen;
+        }
+
+        &:last-of-type {
+            background-color: variables.$fontColorred;
+        }
+
+        .paragraf {
+            font-size: variables.$fontSizeSrednji;
+            color: variables.$fontColordark;
+            // margin-right: 2rem;
+        }
+        .row{
+            @include mixin.row(flex-end, center, 0, 1rem)
+        }
+
+    }
+}
+
+
+#section2 {
+    @include mixin.row(center, center, 0, 1rem);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: variables.$section2;
+    padding: 1rem 0;
+
+    #plusMinus {
+        padding: .5rem;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-size: 1rem;
+
+        &:hover,
+        &:focus {
+            border: 2px solid black;
+        }
+    }
+
+    .input {
+        padding: .5rem;
+        width: 10rem;
+        font-size: 1rem;
+        border: 2px solid grey;
+        border-radius: 5px;
+
+        &:hover,
+        &:focus {
+            border: 2px solid black;
+        }
+        &:last-of-type{
+            text-align: right;
+        }
+        &:last-of-type::placeholder{
+            text-align: left;
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    .button{
+        padding: .5rem;
+        font-size: 1rem;
+        border: 2px solid grey;
+        border-radius: 5px;
+
+        &:hover,
+        &:focus {
+            border: 2px solid black;
+        }
+    }
+}
+
+#section3 {
+    
+    @include mixin.row(center, start, 0, 1rem);
+
+    .section3_div{
+        width: 20rem;
+        margin-top: 1rem;
+        @include mixin.column(space-between, start, .5rem, 0);
+
+        .section3_naslov{
+            color: variables.$fontColorgreen;
+            font-size: variables.$fontSizeSrednji;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            // &:last-of-type{
+            //     color: variables.$fontColorred;
+            // }
+        }
+        p{
+            font-size: variables.$fontSizeMali;
+            color: variables.$fontColordark;
+
+        }
+        .ispis{
+            width: 100%;
+            padding: 0 1rem;
+            @include mixin.column(space-between, center, 1rem, 0);
+            // border-bottom: 1px solid black;
+            
+            .pozitivan{
+                color: variables.$fontColorgreen;
+            }
+            .negativan{
+                color: variables.$fontColorred;
+
+            }
+            
+            .row{
+                @include mixin.row(flex-end, center, 0, 0)
+            }
+        }
+    }
+    .border{
+        border-bottom: 1px solid black;
+        @include mixin.row(space-between, center, 0, 0);
+        width: 100%;
+    }
+}
